@@ -13,19 +13,19 @@ class MessageContainer extends StatelessWidget {
   final DateFormat? timeFormat;
 
   /// [messageTextBuilder] function takes a function with this
-  /// structure [Widget Function(String)] to render the text inside
+  /// structure [Widget Function(String, ChatMessage)] to render the text inside
   /// the container.
-  final Widget Function(String?, [ChatMessage])? messageTextBuilder;
+  final Widget Function(String?, ChatMessage)? messageTextBuilder;
 
   /// [messageImageBuilder] function takes a function with this
-  /// structure [Widget Function(String)] to render the image inside
+  /// structure [Widget Function(String, ChatMessage)] to render the image inside
   /// the container.
-  final Widget Function(String?, [ChatMessage])? messageImageBuilder;
+  final Widget Function(String?, ChatMessage)? messageImageBuilder;
 
   /// [messageTimeBuilder] function takes a function with this
   /// structure [Widget Function(String)] to render the time text inside
   /// the container.
-  final Widget Function(String, [ChatMessage])? messageTimeBuilder;
+  final Widget Function(String, ChatMessage)? messageTimeBuilder;
 
   /// Provides a custom style to the message container
   /// takes [BoxDecoration]
