@@ -455,7 +455,7 @@ class DashChatState extends State<DashChat> {
           });
         }
       } else if (topReached) {
-        widget.onLoadEarlier!();
+        if (widget.onLoadEarlier != null) widget.onLoadEarlier!();
       }
     });
   }
