@@ -273,11 +273,11 @@ class DashChat extends StatefulWidget {
   /// return BoxDecoration
   final BoxDecoration Function(ChatMessage, bool?)? messageDecorationBuilder;
 
-  late ScrollToBottomStyle scrollToBottomStyle;
+  final ScrollToBottomStyle scrollToBottomStyle;
 
   DashChat({
     Key? key,
-    ScrollToBottomStyle? scrollToBottomStyle,
+    this.scrollToBottomStyle = const ScrollToBottomStyle(),
     this.avatarMaxSize = 30.0,
     this.inputTextDirection = TextDirection.ltr,
     this.inputToolbarMargin = const EdgeInsets.all(0.0),
@@ -351,9 +351,7 @@ class DashChat extends StatefulWidget {
     this.messagePadding = const EdgeInsets.all(8.0),
     this.textBeforeImage = true,
     this.messageDecorationBuilder,
-  }) : super(key: key) {
-    this.scrollToBottomStyle = scrollToBottomStyle ?? new ScrollToBottomStyle();
-  }
+  }) : super(key: key);
 
   String? getVal() {
     return text;
